@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-control">
+        <button id="musicBtn" onclick="toggleMusic()">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="wedding-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="script-font">Save The Date</h1>
+            <div class="couple-names">
+                <span class="groom">Anh</span>
+                <span class="heart">❤</span>
+                <span class="bride">Em</span>
+            </div>
+            <p class="wedding-date">11 • 01 • 2025</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="invitation">
+        <div class="container">
+            <h2 class="section-title">Trân Trọng Kính Mời</h2>
+            <div class="invitation-text">
+                <p>Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi</p>
+                <p class="highlight">Hôn lễ được tổ chức vào</p>
+            </div>
+            
+            <div class="event-details">
+                <div class="event-card">
+                    <div class="icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Lễ Vu Quy</h3>
+                    <p class="time">09:00 Sáng</p>
+                    <p class="date">Thứ Bảy, 11/01/2025</p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Tư gia nhà gái
+                    </p>
+                    <p class="address">Địa chỉ chi tiết sẽ được gửi riêng</p>
+                </div>
+
+                <div class="event-card">
+                    <div class="icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3>Tiệc Cưới</h3>
+                    <p class="time">11:00 Trưa</p>
+                    <p class="date">Thứ Bảy, 11/01/2025</p>
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Tư gia nhà trai
+                    </p>
+                    <p class="address">Địa chỉ chi tiết sẽ được gửi riêng</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="countdown">
+        <div class="container">
+            <h2 class="section-title">Đếm Ngược Đến Ngày Trọng Đại</h2>
+            <div class="countdown-timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Ngày</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Giờ</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Phút</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Giây</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Album Ảnh</h2>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x500?text=Photo+1" alt="Wedding Photo">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x500?text=Photo+2" alt="Wedding Photo">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x500?text=Photo+3" alt="Wedding Photo">
+                </div>
+                <div class="photo-item">
+                    <img src="https://via.placeholder.com/400x500?text=Photo+4" alt="Wedding Photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvp">
+        <div class="container">
+            <h2 class="section-title">Xác Nhận Tham Dự</h2>
+            <form id="rsvpForm" class="rsvp-form">
+                <input type="text" placeholder="Họ và tên" required>
+                <input type="tel" placeholder="Số điện thoại" required>
+                <select required>
+                    <option value="">Bạn sẽ tham dự?</option>
+                    <option value="yes">Có, tôi sẽ tham dự</option>
+                    <option value="no">Xin lỗi, tôi không thể tham dự</option>
+                </select>
+                <input type="number" placeholder="Số người tham dự" min="1" max="10">
+                <textarea placeholder="Lời chúc của bạn" rows="4"></textarea>
+                <button type="submit">Gửi Xác Nhận</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="wishes">
+        <div class="container">
+            <h2 class="section-title">Sổ Lưu Bút</h2>
+            <div class="wishes-list" id="wishesList">
+                <div class="wish-item">
+                    <div class="wish-header">
+                        <span class="wish-name">Nguyễn Văn A</span>
+                        <span class="wish-time">2 giờ trước</span>
+                    </div>
+                    <p class="wish-content">Chúc hai bạn trăm năm hạnh phúc! 💕</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Thank You ❤</p>
+            <p class="footer-names">Anh & Em</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
